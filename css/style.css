@@ -57,6 +57,13 @@ nav{
 	padding: 2px 50px;
 	margin-top: 25px;
 	cursor: pointer;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+.logo a:hover:before{
+	transform: scaleX(1);
+	transform-origin: left;
 }
 
 .logo a span{
@@ -85,15 +92,30 @@ ul li{
 ul li a{
 	font-size: 22px;
 	color: white;
-	padding: 10px;
+	padding: 15px;
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	cursor: pointer;
 	transition: all .5s ease;
+	position: relative;
 }
-ul li a:hover{
-	color: purple;
+
+nav ul li a:before{
+	position: absolute;
+	content: "";
+	left: 10px;
+	bottom: 10px;
+	height: 3px;
+	width: 80%;
+	background: white;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+	transform: scaleX(1);
+	transform-origin: left;
 }
 
 /* ---------------------headerText-------------------- */
@@ -290,21 +312,31 @@ ul li a:hover{
 .skillTitle{
 	font-size: 35px;
 	color: purple;
+	cursor: pointer;
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 70px;
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
+	position: relative;
 }
 
-.skillTitle::after{
+.skillTitle:after{
 	content: "";
-	padding: 2px 60px;
-	background: crimson;
+	padding: 2px 63px;
+	background: purple;
+	cursor: pointer;
 	margin-top: 43px;
 	position: absolute;
-	margin-left: -124px;
+	margin-left: -130px;
+	/* transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s linear; */
 }
+/* .skillTitle:hover:before{
+	transform: scaleX(1);
+	transform-origin: left;
+} */
 
 .skillWrap{
 	display: flex;
@@ -333,11 +365,11 @@ ul li a:hover{
 
 .serTitle::after{
 	content: "";
-	padding: 2px 85px;
+	padding: 2px 88px;
 	background: white;
 	margin-top: 43px;
 	position: absolute;
-	margin-left: -172px;
+	margin-left: -182px;
 }
 
 
@@ -977,6 +1009,27 @@ ul li a:hover{
 		width: 250px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
